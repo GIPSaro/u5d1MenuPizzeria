@@ -1,4 +1,24 @@
 package giorgiaipsarop.u5d1MenuPizzeria;
+import lombok.Getter;
+import lombok.Setter;
 
-public class Topping {
+@Getter
+@Setter
+
+public class Topping extends MenuLIst {
+    private String name;
+
+    public Topping(String name, int calories, double price) {
+        super(calories, price);
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Topping{" +
+                "name='" + name + '\'' +
+                ", calories=" + calories +
+                ", price=" + price +
+                '}';
+    }
 }
