@@ -10,12 +10,17 @@ import java.util.List;
 
 @Getter
 @ToString
-@NoArgsConstructor
-@AllArgsConstructor
+
 public class Menu {
     private List<Pizza> pizzaList;
     private List<Drink> drinkList;
     private List<Topping> toppingList;
+
+    public Menu(List<Pizza> pizzaList, List<Drink> drinkList, List<Topping> toppingList) {
+        this.pizzaList = pizzaList;
+        this.drinkList = drinkList;
+        this.toppingList = toppingList;
+    }
 
     public void printMenu() {
         System.out.println("******* Menu *******");
